@@ -103,15 +103,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 
                 for (int w = -1; w < 2; w++)
                 {
-                    //CHECK VALIDITY OF PIXEL-i.e if pixel is outside the image 
-                    if (i + h < 0 || i + h > height|| j + w  < 0 || j + w > width  )
+                    //CHECK VALIDITY OF PIXEL-i.e if pixel is inside the image 
+                    if ( i + h >=0 && i + h < height && j + w >= 0 && j + w < width  )
                     {
-                        continue; //skip
+                     sumBlue += image[i+h][j+w].rgbtBlue;
+                     sumGreen += image[i+h][j+w].rgbtGreen;
+                     sumRed += image[i+h][j+w].rgbtRed;
+                     counter++;  
                     }
-                    sumBlue += image[i+h][j+w].rgbtBlue;
-                    sumGreen += image[i+h][j+w].rgbtGreen;
-                    sumRed += image[i+h][j+w].rgbtRed;
-                    counter++;
+                    
                 }
             }
 
