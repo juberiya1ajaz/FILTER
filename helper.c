@@ -1,5 +1,6 @@
 #include "helpers.h"
 #include <math.h>
+//B&W Filter
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     float avearage;
