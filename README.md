@@ -1,5 +1,5 @@
 # FILTER
-it is a program that is going to implement grey, sepia, reflect and blur filter to particular image.
+it is a program that will implement grey, sepia, reflect and blur filter to particular image.
 
 GREY
 
